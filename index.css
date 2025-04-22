@@ -1,0 +1,384 @@
+/* BETŰTIPUS és MÉRET*/
+body {font-family: 'Playpen Sans', cursive;}
+
+h1{
+    font-size: 50px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+h2{
+    font-size: 20px;
+    margin: 0px;
+}
+h3{
+    font-size: 14px;
+    margin: 0px;
+}
+p{
+    margin:0px;
+    font-size: 13px
+}
+li{
+    font-size: 18px;
+}
+
+
+/*HÁTTÉR */
+body {
+    padding: 30px;
+    background-image: url('images/backgroundIMG50.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ELRENDEZÉS*/
+
+div#game {grid-area: game;}
+div#infos{grid-area: infos;}
+
+body{
+	display: grid; 
+	grid-template-columns: 650px 1fr; 
+	grid-template-areas:
+	'game infos' ; 
+}
+
+/* formázás*/
+/* BALOLDAL */
+div#game{
+    margin-right:25px;
+}
+
+div#game table {
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 5px;
+    height: 600px;
+    width: 600px;
+}
+
+div#game table td {
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode:color;   /* NAGYON FONTOS*/
+    padding:0;
+}
+
+
+/* JOBBOLDAL */
+/*pontok*/
+
+div#tavasz{grid-area: tavasz;}
+div#nyar{grid-area: nyar;}
+div#osz{grid-area: osz;}
+div#tel{grid-area: tel;}
+div#seasonsPoints > h2 {grid-area: points;}
+
+
+
+div#seasonsPoints{
+    display: grid; 
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto;
+	grid-template-areas:
+	'tavasz     nyar    osz     tel    '
+    'points     points  points  points ' ;
+    width: 450px;
+}
+
+div#seasonsPoints h2{
+    margin:3px;
+    text-align: center;
+}
+
+div#seasonsPoints div{
+    height: 90px;
+    width: 90px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+div#tavasz {
+    border: 4px solid #3b8e3e;
+    background-color: #69be6c;   
+}
+
+div#nyar {
+    border: 4px solid #ddbb08;
+    background-color: #fee874;   
+}
+
+div#osz {
+    border: 4px solid #6c3f14;
+    background-color: #eabd94;   
+}
+
+div#tel {
+    border: 4px solid #3190a5;
+    background-color: #59d2ec;   
+}
+
+
+/* küldik*/
+div#missionCards h3{
+    text-align: center;
+    color: white;
+}
+
+div#missionCards h2{
+    text-align: left;
+    color: white;
+    margin-left: 10px;
+}
+
+div#missionCards p{
+    color: white;
+}
+
+hr{
+    border-top: 2px solid black;
+}
+
+
+div#missionCards  > div{
+    margin: 7px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #363636;
+}
+
+div#missionA{grid-area: a;}
+div#missionB{grid-area: b;}
+div#missionC{grid-area: c;}
+div#missionD{grid-area: d;}
+
+div#missionCards{
+    display: grid; 
+	grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+	grid-template-areas:
+	'a b'
+    'c d' ;
+}
+
+
+div#missionCards > div > img.missionImg{grid-area: missionImg;}
+div#missionCards > div > h3#title{grid-area: title;}
+div#missionCards > div > p#description{grid-area: description;}
+div#missionCards > div > p#points{grid-area: points;}
+div#missionCards > div > h2{grid-area: A;}
+div#missionCards > div > img.gCircle{grid-area: gCircle;}
+
+div#missionCards > div{
+    display: grid; 
+	grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto 25px;
+	grid-template-areas:
+	'missionImg title title title'
+    'missionImg description description description'
+    'missionImg points gCircle A' ;
+}
+
+.missionImg{
+    height: 100px;
+    float: left;
+}
+
+.gCircle{
+    width: 28px;
+    float: right;
+}
+
+/*ELEM SZERKESZTÉS*/
+
+h2#leElem{
+    float:left;
+    display: box;
+    margin-right: 30px;
+}
+
+div#time h2{
+    margin-top: 6px;
+    text-align: center;
+}
+div#previewTable table{
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 5px;
+    height: 155px;
+    width: 155px;
+    margin: 20px;
+}
+
+div#previewTable td{
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+    padding:0;
+}
+
+div#setElement{
+    position: relative;
+}
+
+div#time{
+    position: absolute;
+    top: 0;
+    left: 380px;
+    width: 58px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+div#time img{
+    float: right;
+    margin-top: 6px;
+}
+
+
+div#setElement div#rotate, div#setElement div#reflects{
+    position: absolute;
+    left: 70px;
+    margin-left: 0px;
+    padding: 0px 30px 0px 30px;
+    background-color: white;
+    border: 2px solid grey;
+    border-radius: 10px;
+    height: 40px;
+}
+
+div#setElement div#rotate{ top: 50px; }
+div#setElement div#reflects{ top: 110px; }
+
+
+/*Játék vége*/
+
+body{
+    position: relative;
+}
+
+#exit{
+    position: absolute;
+    top:30px;
+    right:30px;
+    text-align: center;
+    width: 130px;
+    height: 60px;
+    background-color: red;
+    border-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 15px;
+}
+
+#game{
+    position: relative;
+}
+
+#gameOver{
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 200px;
+    background-color: white;
+    position: absolute;
+    opacity: 0.7;
+    border-radius: 70px;
+    
+}
+/*játékszabályok*/
+
+#rulesButton{
+    position: absolute;
+    top:100px;
+    right:30px;
+    text-align: center;
+    width: 130px;
+    height: 60px;
+    background-color: yellow;
+    border-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 15px;
+}
+
+#infos{
+    position: relative;
+}
+
+#rules{
+    position: absolute;
+    text-align: center;
+    top: 135px;
+    left: -20px;
+    width: 102%;
+    height: 700px;
+    background-color: yellow;
+    border: 5px solid black;
+    position: absolute;
+    opacity: 1;
+    border-radius: 30px;
+}
+
+#rules li{
+    text-align: left;
+    margin: 10px;
+}
+
+
+/* kisseb kijelzőre*/
+@media screen and (max-width:1330px){
+
+    body{
+        display: grid; 
+        grid-template-columns: 500px 1fr; 
+        grid-template-areas:
+        'game infos' ; 
+    }
+
+    div#game table {
+        background-color: white;
+        border: 5px solid white;
+        border-radius: 5px;
+        height: 450px;
+        width: 450px;
+    }
+
+    div#gameOver{
+        width: 300px;
+        height: 170px;
+    }
+
+}
+
+@media screen and (max-width:1200px){
+
+    body{
+        display: grid; 
+        grid-template-columns: 350px 1fr; 
+        grid-template-areas:
+        'game infos' ; 
+    }
+
+    div#game table {
+        background-color: white;
+        border: 5px solid white;
+        border-radius: 5px;
+        height: 300px;
+        width: 300px;
+    }
+
+    div#gameOver{
+        width: 300px;
+        height: 170px;
+    }
+
+}
+

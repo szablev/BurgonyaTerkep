@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Játék</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+    <div id="game">
+        <h1>Burgonya térkép</h1>
+        <div id="table">
+        </div>
+
+        <div id="gameOver" hidden>
+            <h1>Játék Vége</h1>
+            <h2 id="endGamePoints">Fantasztikus voltál 30 pontot szereztél.</h2>
+        </div>
+    </div>
+
+    <div id="infos">
+
+        <div id="seasonsPoints">
+            <div id="tavasz">
+                <h2>Tavasz</h2>
+                <h2 class="pont">0 pont</h2>
+            </div>
+            <div id="nyar">
+                <h2>Nyár</h2>
+                <h2 class="pont">0 pont</h2>
+            </div>
+            <div id="osz">
+                <h2>Ősz</h2>
+                <h2 class="pont">0 pont</h2>
+            </div>
+            <div id="tel">
+                <h2>Tél</h2>
+                <h2 class="pont">0 pont</h2>
+            </div>
+            <h2 id="allPoints">Öszzesen: 0 pont</h2>
+        </div>
+
+        <div id="details">
+            <h2 id="divCurrentSeason"> Jelenlegi évszak: Tavasz</h2>
+            <hr>
+            <div id="missionCards">
+                <div id="missionA">
+                    <img src="images/kuldik/alap/almosvolgy.png">
+                    <h3>title1</h3>
+                    <p></p>
+                </div>
+                <div id="missionB">
+                    <img src="images/kuldik/alap/erdo_szele.png">
+                    <div id="text">
+                        <h3>title1</h3>
+                        <p>description</p>
+                        <h3>pontok: 0<h3>
+                    </div>
+                </div>
+                <div id="missionC">
+                    <img src="images/kuldik/alap/hatarvidek.png">
+                    <h3>title1</h3>
+                    <p></p>
+                </div>
+                <div id="missionD">
+                    <img src="images/kuldik/alap/almosvolgy.png">
+                    <h3>title1</h3>
+                    <p></p>
+                </div>
+            </div>
+            <h2 id="monthTime"> Tavaszból hátralévő idő: 7/7</h2>
+            <h2 id="yearTime"> Évből hátralévő idő: 28/28</h2>
+            <hr>
+
+            <h2 id="leElem">Lehelyezendő elem:</h2>
+
+            <div id="setElement">
+                <div id="previewTable">
+                </div>
+                <div id="time"><img src="images/timer.png">
+                    <h2>1</h2>
+                </div>
+                <div id="rotate">
+                    Forgatás
+                </div>
+                <div id="reflects">
+                    Tükrözés
+                </div>
+            </div>
+        </div>
+
+        <div id="rules">
+            <h2>Játékszabályok</h2>
+                <ul>
+                    <li>A játék 28 időegységig tart. Minden térképelemhez tartozik egy időegység, ami meghatározza, hogy mennyi ideig tart őket felfedezni. Addig tudunk új térképelemeket húzni, amíg el nem érjük a 28 időegységet. Ha az összesített időérték eléri, vagy meghaladja a 28 időegységet, a játék véget ér. Például, ha 1 időegységünk maradt hátra, és egy két időegységgel rendelkező térképelemet kapunk, a térképelemet még lehelyezhetjük, és utána a játék véget ér.</li>
+                    <li>Minden évszak végén 2 küldetéskártyáért tudunk pontszámot kapni. A tavasz végén az A-B küldetésért, a nyár végén a B-C küldetésért, az ősz végén a C-D küldetésért, a tél végén pedig a D-A küldetésért tudunk pontokat szerezni. A négy küldetésnél egyenként fel van tüntetve kell, melyik küldetésre hány pontot kapunk!</li>
+                    <li>A játék végén a négy évszak alatt szerzett pontszámaink összeadódnak, és ezek fogják adni a végleges pontszámunkat.</li>
+               </ul>
+            <h2>Billentyűk</h2>
+                <ul>
+                    <li>R - Forgatás</li>
+                    <li>E - Tükrözés</li>
+                </ul>
+        </div>
+
+    </div>
+
+    <button id="exit">Játék Befejezése</button>
+    <button id="rulesButton">Szabályok</button>
+
+    
+
+
+    <script src="data.js"></script>
+    <script src="missions.js"></script>
+    <script src="game.js"></script>
+    
+
+
+</body>
+
+</html>
